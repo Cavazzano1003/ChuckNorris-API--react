@@ -1,0 +1,13 @@
+.Button{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 19px 33px;
+gap: 10px;
+
+width: 237px;
+height: 74px;
+
+background: #9C61FF;
+border-radius: 130px;
+}

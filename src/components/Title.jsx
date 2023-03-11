@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './styles/App.css'
+import '../styles/Title.css'
 
 function Title() {
   const [count, setCount] = useState(0)
