@@ -4,23 +4,25 @@ import '../styles/Button.css'
 
 function Button({text, variant, callback}) {
     const [count, setCount] = useState(0)
-
-    }
-
-    function clickHandler(){
-        if(props.callback && props.vaariant!=="disable"){
-            props.callback();
-        }
-        else{
-            classRender();
+    let clickHandler = function(e){
+        if(callback != undefined && variant != "disable")
+        {
+            callback();
         }
     }
 
-    return(
-        <div className="Button">
-            <p><button className={"Button" + (props.varint!==undefined ? "disable" : "")} id = {props.id} onCick={clickHandler}>Caricare una random joke</button></p>
+    let classRender = function (){
+        let classes = [
+            'Button', variant
+        ]
+        return cclasses.join("")
+    }
+
+    return (
+        <div onclick={ clickHandler } className= { classRender() }>
+            {text}
         </div>
     )
-
+}
 
 export default Button
