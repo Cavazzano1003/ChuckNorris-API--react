@@ -10,4 +10,4 @@ function Title(props) {
   )
 }
 
-export default title
+export default Title

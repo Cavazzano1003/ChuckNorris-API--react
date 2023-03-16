@@ -1,13 +1,21 @@
-.Button{
-    display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 19px 33px;
-gap: 10px;
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
-width: 237px;
-height: 74px;
 
-background: #9C61FF;
-border-radius: 130px;
+button{
+    background-color: #A6D9F7;
+    font-size: 20px;
+    font-family: "RocknRoll One", sans-serif; 
+    border: none;
+}
+
+.Button {
+    display: inline-block;
+}
+
+#generate {
+
+}
+
+#clipboard{
+
 }
