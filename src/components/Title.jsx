@@ -4,7 +4,7 @@ import '../styles/Title.css'
 function Title(props) {
 
   return (
-    <div className="Title">
+    <div className = "Title">
     <p>{props.children}</p>
     </div>
   )
