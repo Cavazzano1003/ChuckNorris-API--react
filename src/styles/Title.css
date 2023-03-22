@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
-p {
-    font-size: 20px;
-    font-family: "RocknRoll One", sans-serif;
-}
 
 .Title {
-    text-align: center;
+width: 300px;
+height: 78px;
+
+font-family: 'Anton';
+
+font-weight: 400;
+font-size: 50px;
+line-height: 75px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #423E3B;
+
 }

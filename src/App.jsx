@@ -13,10 +13,9 @@ function App()
   const [categories, setCategories] = useState([]);
   const [clicked, setClicked] = useState(false);
 
-  //carica 
    let loadJokeCallback = function ()
    {
-    let categories = document.getElementById("Dropdown")
+    let categories = document.getElementById("dropdown")
     let url = "https://api.chucknorris.io/jokes/" + (categories==="random"?"random":("random?category=") + categories);
 
     fetch(url).then((resp)=>{
@@ -29,15 +28,12 @@ function App()
     })
    }
 
-   //copia
    let copyTextCallback = function ()
    {
     let JokeText = document.getElementById("JokeText");
     navigator.clipboard.writeText(JokeText.innerText);
-     console.log("copiato");
    }
 
-   //dropdown
    let url = "https://api.chucknorris.io/jokes/categories";
    fetch(url).then((resp)=>{
      return resp.json();
@@ -66,14 +62,3 @@ function App()
 }
 
 export default App
-
-
-
-{/* <div className="App">
-<Title />
-<p><Button text='Carica il joke' callback={loadJokeCallback}/></p>
-<Dropdown id='Dropdown' values={Categories}></Select>
-<Joke id="Joke">{Jokes}</Joke>
-<Button id="Copy" text='Copia il joke' callback={copyTextCallback}/>
-</div>
-) */}
