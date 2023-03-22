@@ -15,7 +15,7 @@ function App()
 
    let loadJokeCallback = function ()
    {
-    let categories = document.getElementById("dropdown")
+    let categories = document.getElementById("dropdown").value
     let url = "https://api.chucknorris.io/jokes/" + (categories==="random"?"random":("random?category=") + categories);
 
     fetch(url).then((resp)=>{
