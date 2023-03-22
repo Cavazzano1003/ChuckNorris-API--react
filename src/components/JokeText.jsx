@@ -5,8 +5,8 @@ function JokeText(props)
 {
     return
     (
-        <div className="JokeText">
-            <p id = {props.id}>{props.children}</p>
+        <div className = "JokeText">
+            <b><p id = {props.id}>{props.children}</p></b>
         </div>
     )
 }

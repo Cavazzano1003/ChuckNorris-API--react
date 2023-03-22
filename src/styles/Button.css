@@ -2,10 +2,11 @@
 
 
 button{
-    background-color: #A6D9F7;
-    font-size: 20px;
-    font-family: "RocknRoll One", sans-serif; 
-    border: none;
+    position: relative;
+width: 202px;
+height: 87px;
+
+border-radius: 10px 10px 20px 20px;
 }
 
 .Button {
