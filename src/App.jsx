@@ -62,7 +62,7 @@ function App()
 
           <Button text='Carica il joke' callback={loadJokeCallback}></Button><br></br>
 
-          <Dropdown id='Dropdown' list={categories} onselect={setCurrentCategory}></Dropdown><br></br>
+          <Dropdown id='dropdown' list={categories} onselect={setCurrentCategory}></Dropdown><br></br>
 
       <Button id='Clipboard' text='Copia il joke' callback={copyTextCallback} variant={clicked === true ? undefined : "disabled"}></Button>
      </div>
