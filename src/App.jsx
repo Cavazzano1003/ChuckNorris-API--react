@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './styles/App.css'
 import Title from './components/Title.jsx'
 import Button from './components/Button.jsx'
@@ -11,13 +11,13 @@ function App()
 
   const [joke, setJoke] = useState("");
   const [categories, setCategories] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState("")
   const [clicked, setClicked] = useState(false);
 
    let loadJokeCallback = function ()
    {
-    let categories = document.getElementById("dropdown").value
-    let url = "https://api.chucknorris.io/jokes/" + (categories==="random"?"random":("random?category=") + categories);
-
+    
+    let url = "https://api.chucknorris.io/jokes/random" + (currentCategory==="" ? "": "?category=" + currentCategory);
     fetch(url).then((resp)=>{
       return resp.json();
     }).then(data=>{
@@ -34,15 +34,23 @@ function App()
     navigator.clipboard.writeText(JokeText.innerText);
    }
 
-   let url = "https://api.chucknorris.io/jokes/categories";
-   fetch(url).then((resp)=>{
-     return resp.json();
-   }).then(data=>{
-     data.unshift("random");
-     setCategories(data);
-   }).catch((e)=>{
-     console.log(e)
-   })
+
+
+   useEffect(()=>{
+    let url = "https://api.chucknorris.io/jokes/categories";
+    fetch(url).then((resp)=>{
+      return resp.json();
+    }).then(data=>{
+      if(categories.length=== 0){
+        console.log("setCategories")
+        setCategories(data);
+
+      }
+    }).catch((e)=>{
+      console.log(e)
+    })
+   }, [])
+   
 
    return (
      <div className="App" align="center">
@@ -54,7 +62,7 @@ function App()
 
           <Button text='Carica il joke' callback={loadJokeCallback}></Button><br></br>
 
-          <Dropdown id='Dropdown' list={categories}></Dropdown><br></br>
+          <Dropdown id='Dropdown' list={categories} onselect={setCurrentCategory}></Dropdown><br></br>
 
       <Button id='Clipboard' text='Copia il joke' callback={copyTextCallback} variant={clicked === true ? undefined : "disabled"}></Button>
      </div>

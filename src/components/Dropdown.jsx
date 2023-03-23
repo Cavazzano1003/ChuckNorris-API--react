@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/Dropdown.css'
 
-function Dropdown({list}) {
+function Dropdown({list, onselect}) {
 
 function renderClasses(){
     let classes = [
@@ -11,9 +11,16 @@ function renderClasses(){
     return classes.join(" ")
   }
 
+  function callback(e){
+    console.log(e.currentTarget.value)
+    if(onselect !== undefined){
+      onselect(e.currentTarget.value)
+    }
+  }
+
   return (
     <div className={renderClasses()}>
-      <select>
+      <select onChange={callback}>
         <option>Scegli una opzione</option>
         {list.map((el,index)=> {return <option value={el} key={index}>{el}</option>})}
       </select>
