@@ -60,7 +60,7 @@ function App()
         
         <JokeText id='JokeText'>{joke}</JokeText>
 
-          <Button text='Carica il joke' callback={loadJokeCallback}></Button><br></br>
+          <Button text='Carica il joke' id='CaricaIlJoke' callback={loadJokeCallback}></Button><br></br>
 
           <Dropdown id='dropdown' list={categories} onselect={setCurrentCategory}></Dropdown><br></br>
 
