@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
-.CaricaIlJoke {
+.Button {
     background-color: #5448C8;
     position: relative;
     width: 202px;
     height: 87px;
     border-radius: 10px 10px 20px 20px;
+    text-align: center;
+    line-height: 87px;
 }
 
 .Button {
