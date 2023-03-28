@@ -1,22 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Anton);
 
 
-button{
+.Button{
+    margin: 6px 0px;
+    background-color: #5448C8;
+    color: #FFFECB;
     position: relative;
-width: 202px;
-height: 87px;
-
-border-radius: 10px 10px 20px 20px;
-}
-
-.Button {
+    cursor: pointer;
+    text-align: center;
     display: inline-block;
+    font-family: Anton;
+    font-weight: 50;
+    letter-spacing: 1.2px;
+    
+    
+    margin-inline-start: 152px;
+    margin-inline-end: 152px;
+    pad: 12px 24px;
+    line-height: 90px;
+    width: 200px;
+    height: 90px;
+    border-radius: 10px 10px 20px 20px;
 }
 
-#generate {
 
+.Button:hover{
+    background-color: #6d5dfc;
+    transition: 0.7s;
+    transform: scale(1.05);
 }
 
-#clipboard{
-
+Button:focus,
+Button:focus-visible{
+    outline: 4px auto -webkit-focus-ring-color;
 }
