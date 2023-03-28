@@ -55,18 +55,17 @@ function App()
    return (
      <div className="App" align="center">
 
+      <div className="rectangle" />
         
         <Title>Joke norris</Title>
         
         <JokeText id='JokeText'>{joke}</JokeText><br/><br/>
 
+
         <Dropdown id='dropdown' list={categories} onselect={setCurrentCategory}></Dropdown>
 
           <Button name='Carica' text='Carica il joke' callback={loadJokeCallback}></Button>
           <Button name='Clipboard' text='Copia il joke' callback={copyTextCallback} variant={clicked === true ? undefined : "disabled"}></Button>
-
-
-      
      </div>
    )
 }
