@@ -1,9 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Anton);
 
-.renderClasses{
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    border: none;
+.Dropdown select
+{
+    background-color: #FFFECB;
+    color: #423E3B;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(201, 16, 16, 0.2);
+    padding: 12px 16px;
+    border-radius: 20px 20px 20px 20px;
+    font-family: Anton;
+    font-weight: 50;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.Dropdown select:hover 
+{
+  
+  transition: 0.7s;
+  transform: scale(0.9);
+  opacity: 1;
+  top: 50px;
+}
+
+.Dropdown option
+{
+  font-family: Anton;
+  visibility: visible;
+  opacity: 0;
+}
+
+.Dropdown option:hover
+{
+  transition: .5s;
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+  display: block;
+  background-color: #f1f1f1;
 }

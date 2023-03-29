@@ -55,7 +55,7 @@ function App()
    return (
      <div className="App" align="center">
 
-      <div className="rectangle" />
+
         
         <Title>Joke norris</Title>
         
